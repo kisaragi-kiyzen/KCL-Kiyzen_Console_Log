@@ -11,5 +11,5 @@ pkg update -y && pkg upgrade -y && pkg install -y git python cloudflared && git 
 
 Second session.
 ```bash
-Still under development!
+echo "alias kirim='f() { curl -X POST -H \"Content-Type: application/json\" -d \"{\\\"pesan\\\":\\\"\$1\\\"}\" http://127.0.0.1:5000/api/input; }; f'" >> ~/.bashrc && source ~/.bashrc && kirim "<message>"
 ```
