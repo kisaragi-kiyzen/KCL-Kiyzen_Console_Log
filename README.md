@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://www.image2url.com/r2/default/images/1783816579910-5e05edca-7252-4942-a359-448906c63796.jpg" style="width: 50%;" />
+  <img src="https://www.image2url.com/r2/default/images/1783816579910-5e05edca-7252-4942-a359-448906c63796.jpg" style="width: 100%;" />
 </p>
 
 <h1 align="center">KCL — Kiyzen Console Log</h1>
