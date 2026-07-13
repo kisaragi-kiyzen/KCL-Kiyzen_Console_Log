@@ -29,7 +29,7 @@ A simple Flask-based web console for viewing logs in real time.
 
 ## 📋 Requirements
 
-- Termux
+- [Termux](Termux)
 - Internet connection
 
 ---
