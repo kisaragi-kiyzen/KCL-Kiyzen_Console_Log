@@ -1,4 +1,4 @@
-# KCL --- Kiyzen Console Log
+# KCL - Kiyzen Console Log
 
 A simple Flask-based web console for viewing logs in real time.
 
