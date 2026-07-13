@@ -41,7 +41,7 @@ pkg update -y && pkg upgrade -y && pkg install -y git python cloudflared && git 
 Open your browser:
 
 ```text
-http://127.0.0.1:5000
+http://localhost:5000
 ```
 
 ### Session 2 — Send Logs
