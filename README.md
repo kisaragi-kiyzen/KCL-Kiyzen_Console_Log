@@ -1,17 +1,48 @@
-# KCL - Kiyzen Console Log
-
+```{=html}
+<h1 align="center">
+```
+KCL --- Kiyzen Console Log
+```{=html}
+</h1>
+```
+```{=html}
+<p align="center">
+```
 A simple Flask-based web console for viewing logs in real time.
+```{=html}
+</p>
+```
+```{=html}
+<p align="center">
+```
+`<img src="https://img.shields.io/github/license/kisaragi-kiyzen/KCL-Kiyzen_Console_Log">`{=html}
+`<img src="https://img.shields.io/github/repo-size/kisaragi-kiyzen/KCL-Kiyzen_Console_Log">`{=html}
+`<img src="https://img.shields.io/github/last-commit/kisaragi-kiyzen/KCL-Kiyzen_Console_Log">`{=html}
+`<img src="https://img.shields.io/github/stars/kisaragi-kiyzen/KCL-Kiyzen_Console_Log">`{=html}
+```{=html}
+</p>
+```
 
 ------------------------------------------------------------------------
 
-## Requirements
+## ✨ Features
+
+-   Real-time web console
+-   Flask backend
+-   JSON API
+-   Mobile-friendly interface
+-   Cloudflare Tunnel support
+
+------------------------------------------------------------------------
+
+## 📋 Requirements
 
 -   Termux
 -   Internet connection
 
 ------------------------------------------------------------------------
 
-# Installation
+## 🚀 Installation
 
 ### Session 1 --- Start the Server
 
@@ -19,24 +50,18 @@ A simple Flask-based web console for viewing logs in real time.
 pkg update -y && pkg upgrade -y && pkg install -y git python cloudflared && git clone https://github.com/kisaragi-kiyzen/KCL-Kiyzen_Console_Log.git && cd KCL-Kiyzen_Console_Log && pip install --upgrade pip flask && python app.py
 ```
 
-The server will start at:
+Open your browser:
 
-    http://127.0.0.1:5000
-
-------------------------------------------------------------------------
+``` text
+http://127.0.0.1:5000
+```
 
 ### Session 2 --- Send Logs
 
-Create a `send` command:
+Create the `send` command:
 
 ``` bash
 echo 'alias send='\''f(){ curl -s -X POST -H "Content-Type: application/json" -d "{\"pesan\":\"$1\"}" http://127.0.0.1:5000/api/input; }; f'\''' >> ~/.bashrc && source ~/.bashrc
-```
-
-Send a log:
-
-``` bash
-send "Hello World!"
 ```
 
 Example:
@@ -49,9 +74,7 @@ send "User Login"
 
 ------------------------------------------------------------------------
 
-## Public Access (Optional)
-
-Expose the local server using Cloudflare Tunnel:
+## 🌐 Public Access
 
 ``` bash
 cloudflared tunnel --url http://127.0.0.1:5000
@@ -59,17 +82,20 @@ cloudflared tunnel --url http://127.0.0.1:5000
 
 Cloudflare will generate a public URL similar to:
 
-    https://xxxxxxxx.trycloudflare.com
-
-Open the generated URL in your browser.
+``` text
+https://xxxxxxxx.trycloudflare.com
+```
 
 ------------------------------------------------------------------------
 
-## API
+## 📡 API
 
-### Send Log
+  Endpoint        Method  Description
+  -------------- -------- --------------
+  `/api/input`     POST   Send a log
+  `/api/data`      GET    Get all logs
 
-`POST /api/input`
+### Example Request
 
 ``` json
 {
@@ -77,16 +103,18 @@ Open the generated URL in your browser.
 }
 ```
 
-### Get Logs
+------------------------------------------------------------------------
 
-`GET /api/data`
+## 📝 Notes
 
-Returns all stored logs in JSON format.
+-   Logs are stored in memory only.
+-   Restarting the server clears all logs.
+-   Designed for lightweight logging and testing.
 
 ------------------------------------------------------------------------
 
-## Notes
+## 📄 License
 
--   Logs are stored in memory only.
--   Restarting the server will clear all logs.
--   This project is intended for lightweight logging and testing.
+This project is licensed under the **Apache License 2.0**.
+
+See the [LICENSE](LICENSE) file for more information.
